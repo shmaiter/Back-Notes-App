@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const connectDB = require("./config/dbConnection");
 const credentials = require("./middleware/credentials");
 
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 10000;
 
 connectDB();
 app.use(credentials);
