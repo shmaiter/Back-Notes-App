@@ -1,3 +1,3 @@
-const allowedOrigins = ["http://localhost:3000", "https://pinit-notes.netlify.app", "https://pinit-notes.onrender.com/"];
-
+const allowedOrigins = ["https://pinit-notes.onrender.com/"];
+//"http://localhost:3000",
 module.exports = allowedOrigins;
