@@ -8,24 +8,13 @@ const mongoose = require("mongoose");
 const connectDB = require("./config/dbConnection");
 const credentials = require("./middleware/credentials");
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3500;
 
 connectDB();
 
-// app.use((req, res, next) => {
-//     res.set("Access-Control-Allow-Origin", "*");
-//     res.set("Access-Control-Allow-Headers", "*");
-//     res.set("Access-Control-Allow-Methods", "*");
-//     if (req.method === "OPTIONS") {
-//         res.status(200).end();
-//         return;
-//     }
-//     next();
-// });
 app.use(credentials);
 
 app.use(cors(corsOptions));
-app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
